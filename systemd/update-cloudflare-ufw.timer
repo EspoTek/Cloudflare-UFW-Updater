@@ -1,0 +1,10 @@
+[Unit]
+Description=Run update-cloudflare-ufw script periodically
+
+[Timer]
+OnCalendar=*-*-* 04:00:00
+OnBootSec=10min
+Persistent=true
+
+[Install]
+WantedBy=timers.target
