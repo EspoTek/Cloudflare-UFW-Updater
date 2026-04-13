@@ -9,7 +9,10 @@ Automatically updates UFW rules to allow the latest Cloudflare IP ranges for HTT
 - Uses a systemd timer to run daily at 04:00 and once 10 minutes after boot
 
 ## One-click setup
-`curl -fsSL https://raw.githubusercontent.com/EspoTek/Cloudflare-UFW-Updater/refs/heads/main/setup_cloudflare_ufw.sh | sudo bash`
+```bash
+curl -fsSL https://raw.githubusercontent.com/EspoTek/Cloudflare-UFW-Updater/refs/heads/main/setup_cloudflare_ufw.sh | sudo bash
+```
+
 Just dump that line in the terminal and it'll set itself up.
 
 ## Installation
