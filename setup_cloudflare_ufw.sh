@@ -10,12 +10,11 @@ sudo ufw --force reset || true
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw allow 22/tcp
+sudo ufw --force enable || true
 
 REPO_DIR="/tmp/Cloudflare-UFW-Updater"
 rm -rf "$REPO_DIR"
 git clone https://github.com/espotek/Cloudflare-UFW-Updater "$REPO_DIR"
 cd "$REPO_DIR"
 sudo bash deploy.sh --run-now
-
-sudo ufw --force enable || true
 sudo ufw status verbose
